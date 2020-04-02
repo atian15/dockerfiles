@@ -1,5 +1,5 @@
-# 基础镜像 node:8.16.2-alpine
-FROM node:8.16.2-alpine
+# 基础镜像 node:9.11.2-alpine
+FROM node:9.11.2-alpine
 
 # 设置 DOCKER CLI 版本
 ARG DOCKER_CLI_VERSION="19.03.8"
