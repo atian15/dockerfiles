@@ -9,9 +9,7 @@ ENV DOCKER_CLI_DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86
 ARG KUBECTL_VERSION="v1.15.0"
 ENV KUBECTL_DOWNLOAD_URL="https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl"
 
-RUN  echo 'http://mirrors.aliyun.com/alpine/v3.10/main' > /etc/apk/repositories \
-    && echo 'http://mirrors.aliyun.com/alpine/v3.10/community' >>/etc/apk/repositories \
-    && npm config set unsafe-perm true \
+RUN  npm config set unsafe-perm true \
     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && npm install -g nrm \
     && nrm add transfar http://10.77.0.105:4873/ \
