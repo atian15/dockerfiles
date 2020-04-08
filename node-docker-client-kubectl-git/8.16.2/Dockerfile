@@ -22,5 +22,5 @@ RUN  npm config set unsafe-perm true \
     && rm -rf /tmp/download \
     && curl -L $KUBECTL_DOWNLOAD_URL -o /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl \
-    && apk del ca-certificates curl git \
+    && apk del ca-certificates curl \
     && rm -rf /var/cache/apk/*
